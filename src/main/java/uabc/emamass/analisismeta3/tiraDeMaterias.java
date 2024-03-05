@@ -12,7 +12,8 @@ public class tiraDeMaterias {
     
     public tiraDeMaterias(){}
     
-    public String UPDATE(String estudiante){
-        return estudiante+" inscrito al sistema";
+    public String UPDATE(String estudiante, String curso){
+        return estudiante+" inscrito al curso "+curso;
+        //Mandar a UABCDB
     }
 }

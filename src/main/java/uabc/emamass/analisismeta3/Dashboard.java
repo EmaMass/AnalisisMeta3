@@ -12,12 +12,12 @@ public class Dashboard {
 
     public static void main(String[] args) {
         Dashboard dash = new Dashboard();
-        dash.despliegaSensores(args);
+        dash.despliegaSensores();
         formatoDeInscripcion Formato = new formatoDeInscripcion();
-        Formato.inscribir("Emanuel Seiji");
+        Formato.eligeCurso();
     }
     
-    private void despliegaSensores(String[] args){
+    private void despliegaSensores(){
         SensorProxy LightSensor = new SensorProxy();
         SensorProxy TemperatureSensor = new SensorProxy();
         updateDisplay(TemperatureSensor.updateData());
