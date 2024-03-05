@@ -8,9 +8,9 @@ package uabc.emamass.analisismeta3;
  *
  * @author Emanuel Seiji Massuda Cuevas (poppe)
  */
-public class tiraDeMaterias {
+public class ListaDeCursos {
     
-    public tiraDeMaterias(){}
+    public ListaDeCursos(){}
     
     public String UPDATE(String estudiante, String curso){
         return estudiante+" inscrito al curso "+curso;

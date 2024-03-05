@@ -13,18 +13,16 @@ public class Dashboard {
     public static void main(String[] args) {
         Dashboard dash = new Dashboard();
         dash.despliegaSensores();
-        formatoDeInscripcion Formato = new formatoDeInscripcion();
-        Formato.eligeCurso();
+        Formato formatoDeInscripcion = new Formato();    
+        formatoDeInscripcion.eligeCurso();
     }
     
     private void despliegaSensores(){
-        SensorProxy LightSensor = new SensorProxy();
-        SensorProxy TemperatureSensor = new SensorProxy();
-        updateDisplay(TemperatureSensor.updateData());
-        updateDisplay(LightSensor.updateData());
+        SensorProxy Sensores = new SensorProxy();
+        updateDisplay(Sensores.updateData());
     }
     
-    private void updateDisplay(int valores){
+    private void updateDisplay(String valores){
         System.out.println(valores);
     }
 }

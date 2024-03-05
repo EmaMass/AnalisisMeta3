@@ -16,14 +16,17 @@ public class SensorProxy {
         this.rmd = new Random();
     }
     
-    public int updateData(){
-        int avg = 0;
+    public String updateData(){
+        int tempavg = 0;
+        int luzavg = 0;
         while(ciclos > 0){
             ciclos--;
-            avg = avg + read();
+            tempavg = tempavg + read();
+            luzavg = luzavg + read();
         }
-        avg = avg/5;
-        return avg;
+        tempavg = tempavg/5;
+        luzavg = luzavg/5;
+        return "Temperatura Sensor: "+tempavg+" Sensor de Luz: "+luzavg;
     }
     
     private int read(){

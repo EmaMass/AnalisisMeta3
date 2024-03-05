@@ -8,10 +8,10 @@ import java.util.Scanner;
  *
  * @author Emanuel Seiji Massuda Cuevas (poppe)
  */
-public class formatoDeInscripcion {
-    tiraDeMaterias ListaDeCursos = new tiraDeMaterias();
+public class Formato {
+    ListaDeCursos tiraDeMaterias = new ListaDeCursos();
     Scanner sc = new Scanner(System.in);
-    public formatoDeInscripcion(){
+    public Formato(){
     }
     
     private void actualizaFormato(String mensaje){
@@ -19,7 +19,7 @@ public class formatoDeInscripcion {
     }
     
     public void inscribir(String estudiante, String curso){
-        actualizaFormato(ListaDeCursos.UPDATE(estudiante,curso));   
+        actualizaFormato(tiraDeMaterias.UPDATE(estudiante,curso));   
     }
     
     public void eligeCurso(){
